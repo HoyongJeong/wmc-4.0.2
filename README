@@ -1,0 +1,16 @@
+##################################################
+#   History                                      #
+##################################################
+
+= [4.1.0] 09. Apr. 2019. by Hoyong Jeong =
+  - Default smearing values to zero. Smearing also can be done on Sorter processing.
+  - Paper sheets for FRH1, 2, 3 have been added.
+  - Plexiglass plates for FRH4, 5 have been added.
+
+= [4.0.1] 26. Feb. 2019. by Hoyong Jeong =
+  - Enable dE smearing and add resolution option in config
+  - Edit threshold values for layers. I followed rootsorter default options. (MCFilterFDScint.rc)
+  - Some modification for scripts/CheckData.C
+
+= [4.0.0] 28. Jan. 2019. by Hoyong Jeong =
+  - First version of wmc4
