@@ -2,7 +2,7 @@
 #   History                                      #
 ##################################################
 
-= [4.1.0] 09. Apr. 2019. by Hoyong Jeong =
+= [4.0.2] 09. Apr. 2019. by Hoyong Jeong =
   - Default smearing values to zero. Smearing also can be done on Sorter processing.
   - Paper sheets for FRH1, 2, 3 have been added.
   - Plexiglass plates for FRH4, 5 have been added.
