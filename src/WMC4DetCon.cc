@@ -340,7 +340,8 @@ G4VPhysicalVolume* WMC4DetCon::Construct()
 			m_FWC1TedLV[i] -> SetVisAttributes(new G4VisAttributes(G4Colour::Cyan()));
 
 			// Positioning of FWC1 element
-			G4ThreeVector dr(m_FWC1RMin - rDMin, 0., 0.);
+//			G4ThreeVector dr(m_FWC1RMin - rDMin, 0., 0.);
+			G4ThreeVector dr((m_MylThi + m_TedThi) / std::sin(15.*degree), 0., 0.);
 			dr += G4ThreeVector((m_FWC1RMax-m_FWC1RMin) * (1. - std::cos(20. * degree)), 0., 0.);
 			dr.rotateZ((7.5+15.*i) * degree);
 			m_FWC1Pos[i] = G4ThreeVector(0., 0., m_FWC1PZ - 0.5*(m_FWC1DY+m_FWC1DX1)*std::sin(20. * degree)) + dr;
@@ -399,7 +400,8 @@ G4VPhysicalVolume* WMC4DetCon::Construct()
 			m_FWC2TedLV[i] -> SetVisAttributes(new G4VisAttributes(G4Colour::Cyan()));
 
 			// Positioning of FWC2 element
-			G4ThreeVector dr(m_FWC2RMin - rDMin, 0., 0.);
+//			G4ThreeVector dr(m_FWC2RMin - rDMin, 0., 0.);
+			G4ThreeVector dr((m_MylThi + m_TedThi) / std::sin(15.*degree), 0., 0.);
 			dr.rotateZ((7.5+15.*i) * degree);
 			m_FWC2Pos[i] = G4ThreeVector(0., 0., m_FWC2PZ) + dr;
 			m_FWC2Rot[i] = new G4RotationMatrix();
@@ -454,7 +456,8 @@ G4VPhysicalVolume* WMC4DetCon::Construct()
 
 			// Positioning of FTH element
 //			G4ThreeVector dr(m_FTHRMin - rDMin, 0., 0.);
-			G4ThreeVector dr(2. * mm, 0., 0.);
+//			G4ThreeVector dr(2. * mm, 0., 0.);
+			G4ThreeVector dr((m_MylThi + m_TedThi) / std::sin(7.5*degree), 0., 0.);
 			dr.rotateZ((3.75+7.5*i) * degree);
 			m_FTHPos[i] = G4ThreeVector(0., 0., m_FTHPZ) + dr;
 			m_FTHRot[i] = new G4RotationMatrix();
@@ -510,7 +513,8 @@ G4VPhysicalVolume* WMC4DetCon::Construct()
 
 			// Positioning of FRH1 element
 //			G4ThreeVector dr(m_FRH1RMin - m_FRH1DX1 / 2.0 / std::sin(7.5 * degree), 0., 0.);
-			G4ThreeVector dr(2. * mm, 0., 0.);
+//			G4ThreeVector dr(2. * mm, 0., 0.);
+			G4ThreeVector dr((m_MylThi + m_TedThi) / std::sin(15.*degree), 0., 0.);
 			dr.rotateZ((7.5+15.*i) * degree);
 			m_FRH1Pos[i] = G4ThreeVector(0., 0., m_FRH1PZ) + dr;
 			m_FRH1Rot[i] = new G4RotationMatrix();
@@ -570,7 +574,8 @@ G4VPhysicalVolume* WMC4DetCon::Construct()
 
 			// Positioning of FRH2 element
 //			G4ThreeVector dr(m_FRH2RMin - m_FRH2DX1 / 2.0 / std::sin(7.5 * degree), 0., 0.);
-			G4ThreeVector dr(2. * mm, 0., 0.);
+//			G4ThreeVector dr(2. * mm, 0., 0.);
+			G4ThreeVector dr((m_MylThi + m_TedThi) / std::sin(15.*degree), 0., 0.);
 			dr.rotateZ((7.5+15.*i) * degree);
 			m_FRH2Pos[i] = G4ThreeVector(0., 0., m_FRH2PZ) + dr;
 			m_FRH2Rot[i] = new G4RotationMatrix();
@@ -630,7 +635,8 @@ G4VPhysicalVolume* WMC4DetCon::Construct()
 
 			// Positioning of FRH3 element
 //			G4ThreeVector dr(m_FRH3RMin - m_FRH3DX1 / 2.0 / std::sin(7.5 * degree), 0., 0.);
-			G4ThreeVector dr(2. * mm, 0., 0.);
+//			G4ThreeVector dr(2. * mm, 0., 0.);
+			G4ThreeVector dr((m_MylThi + m_TedThi) / std::sin(15.*degree), 0., 0.);
 			dr.rotateZ((7.5+15.*i) * degree);
 			m_FRH3Pos[i] = G4ThreeVector(0., 0., m_FRH3PZ) + dr;
 			m_FRH3Rot[i] = new G4RotationMatrix();
@@ -690,7 +696,8 @@ G4VPhysicalVolume* WMC4DetCon::Construct()
 
 			// Positioning of FRH4 element
 //			G4ThreeVector dr(m_FRH4RMin - m_FRH4DX1 / 2.0 / std::sin(7.5 * degree), 0., 0.);
-			G4ThreeVector dr(2. * mm, 0., 0.);
+//			G4ThreeVector dr(2. * mm, 0., 0.);
+			G4ThreeVector dr((m_MylThi + m_TedThi) / std::sin(15.*degree), 0., 0.);
 			dr.rotateZ((7.5+15.*i) * degree);
 			m_FRH4Pos[i] = G4ThreeVector(0., 0., m_FRH4PZ) + dr;
 			m_FRH4Rot[i] = new G4RotationMatrix();
@@ -750,7 +757,8 @@ G4VPhysicalVolume* WMC4DetCon::Construct()
 
 			// Positioning of FRH5 element
 //			G4ThreeVector dr(m_FRH5RMin - m_FRH5DX1 / 2.0 / std::sin(7.5 * degree), 0., 0.);
-			G4ThreeVector dr(2. * mm, 0., 0.);
+//			G4ThreeVector dr(2. * mm, 0., 0.);
+			G4ThreeVector dr((m_MylThi + m_TedThi) / std::sin(15.*degree), 0., 0.);
 			dr.rotateZ((7.5+15.*i) * degree);
 			m_FRH5Pos[i] = G4ThreeVector(0., 0., m_FRH5PZ) + dr;
 			m_FRH5Rot[i] = new G4RotationMatrix();
@@ -1416,7 +1424,7 @@ void WMC4DetCon::ConstructMaterials()
 	m_AluMat -> AddElement(m_ElAl, 1.0);
 
 	// Stainless steel material
-	m_SSMat = new G4Material("StainlessSteel", 8.06*g/cm3, 6, kStateSolid, labTemp);
+	m_SSMat = new G4Material("StainlessSteel", 7.7*g/cm3, 6, kStateSolid, labTemp);
 	m_SSMat -> AddElement(m_ElC , 0.001);
 	m_SSMat -> AddElement(m_ElSi, 0.007);
 	m_SSMat -> AddElement(m_ElCr, 0.18 );
